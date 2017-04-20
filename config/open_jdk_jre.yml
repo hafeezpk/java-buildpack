@@ -25,7 +25,6 @@ jvmkill_agent:
 memory_calculator:
   version: 3.+
   repository_root: "{default.repository.root}/memory-calculator/{platform}/{architecture}"
-  stack_threads:
   memory_sizes:
     metaspace: 64m..
     stack: 512k..
