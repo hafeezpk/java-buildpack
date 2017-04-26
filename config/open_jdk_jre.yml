@@ -25,9 +25,9 @@ jvmkill_agent:
 memory_calculator:
   version: 3.+
   repository_root: "{default.repository.root}/memory-calculator/{platform}/{architecture}"
-  stack_threads: 300
+  stack_threads: 250
   memory_heuristics:
-    heap: 65
+    heap: 60
     metaspace: 10
-    stack: 5
+    stack: 10
     native: 20
