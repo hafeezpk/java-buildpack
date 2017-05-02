@@ -43,8 +43,7 @@ module JavaBuildpack
         [
           @droplet.environment_variables.as_env_vars,
           @droplet.java_home.as_env_var,
-          '-javaagent:"$PWD/voicec-1.0/lib/org.aspectj.aspectjweaver-1.8.10.jar" -Djdk.tls.client.protocols="TLSv1.1,TLSv1.2" -Xss512K -XX:MaxDirectMemorySize=64M',
-          'exec',
+          @droplet.java_opts.as_env_var,
           qualify_path(start_script(root), @droplet.root)
         ].flatten.compact.join(' ')
       end
