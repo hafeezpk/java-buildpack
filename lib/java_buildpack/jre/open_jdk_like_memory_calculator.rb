@@ -87,7 +87,7 @@ module JavaBuildpack
       end
 
       def java_opts
-        ENV['JAVA_OPTS'] + ' -Xss512K -XX:MaxDirectMemorySize=64M'
+        ENV['JAVA_OPTS']
       end
 
       def memory_calculator
